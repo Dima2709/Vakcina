@@ -190,7 +190,6 @@ class vakcina:
         print('Средний возраст у мужчин: ', sum(m1)/len(m1))
         print('Средний возраст у женщин: ', sum(w1)/len(w1))
     def loyl(self):
-        print(self.vozrast)
         p = []
         y1 = []
         y2 = []
@@ -209,10 +208,18 @@ class vakcina:
             elif i >= 45:
                 y4.append(self.vozrast[i])
         if len(y1) > len(y2) and len(y1) > len(y4) and len(y1) > len(y3):
-            print(y1)
-            print(y2)
-            print(y3)
-            print(y4)
+            print('Самые лояльные люди в возрасте от 18 до 25 лет')
+        elif len(y2) > len(y1) and len(y2) > len(3) and len(y2) > len(y4):
+            print('Самые лояльные люди в возрасте от 25 до 35 лет')
+        elif len(y3) > len(y1) and len(y3) > len(2) and len(y3) > len(y4):
+            print('Самые лояльные люди в возрасте от 35 до 45 лет')
+        elif len(y4) > len(y1) and len(y4) > len(2) and len(y4) > len(y3):
+            print('Самые лояльные люди в возрасте от 45 лет')
+        else:
+            print('Данные разнятся')
+    def mes (self):
+            a = dict((i, self.mesyc.count(i)) for i in self.mesyc)
+            print(a)
 
 b = {1:['dima','м',19,'pol','iun'],2:['dasd','ж',45,'otr','avgust'],3:['jo','м',24,'pol','iun']}
 
@@ -222,5 +229,5 @@ c.men_vakcina()
 c.sred()
 c.sred_mes()
 c.sred_voz()
-
-
+c.loyl()
+c.mes()
